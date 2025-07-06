@@ -5,11 +5,13 @@
   
   --shadow-black: 4px 4px 0 #000;
   --shadow-white: 4px 4px 0 #fff;
+  --shadow-box-image: 1px 4px 9px -3px rgba(0, 0, 0, 1);
+       
  --color-light-hover: #fcf4ff;
- --color-dark-hover:#00002F;
+ --color-dark-hover:#202020;
   --grid-template-columns-auto: repeat(auto-fit, minmax(200px, 1fr));
   --background-image-footer-img: url('/footer-bg-color.png');
-  --color-dark-theme:#11001F;
+  --color-dark-theme:#131313;
   
 }
 
@@ -17,7 +19,7 @@
 
 :root {
   --color-background: #ffffff;
-  --color-foreground: #171717;
+  --color-foreground: #131313;
   
   --font-sans: 'Outfit', sans-serif;
   --font-mono: monospace;

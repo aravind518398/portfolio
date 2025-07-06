@@ -25,7 +25,7 @@ const Services = ({ isDarkMode }) => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.7 }}
         className='text-center max-w-2xl mx-auto mt-5 mb-12'>
-        I am a frontend developer from California, USA with 10 year of experience in multiple companies like Microsoft, Tesla and Apple.
+        I am a frontend developer from Kerala, India with 10 year of experience in multiple companies like Microsoft, Tesla and Apple.
       </motion.p>
       <motion.div
         initial={{ opacity: 0, y: -20 }}

@@ -2,7 +2,7 @@ import { assets, infoList } from '@/assets/assets'
 import Image from 'next/image'
 import React from 'react'
 import { motion } from 'motion/react'
-const toolData = ['/images/git.png', '/images/vscode.png', '/images/mongodb.png', '/images/figma.png', '/images/firebase.png']
+const toolData = [{icon:'/images/git.png',link:'https://git-scm.com/downloads'},{icon: '/images/vscode.png',link:'https://code.visualstudio.com/download'},{icon: '/images/mongodb.png',link:'https://www.mongodb.com/try/download/community'}, {icon:'/images/figma.png',link:'https://www.figma.com/downloads/'}, {icon:'/images/firebase.png', link:'https://firebase.google.com'}]
 
 function About({ isDarkMode }) {
   return (
@@ -30,8 +30,8 @@ function About({ isDarkMode }) {
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className='w-64 sm:w-80 rounded-3xl max-w-none'>
-          <Image className='w-full rounded-3xl' src={assets.user_image} alt='user' />
+          className='w-64 sm:w-80 rounded-3xl max-w-none shadow-2xl'>
+          <Image className='w-full rounded-3xl' src={isDarkMode?assets.user_image: assets.user_image_white} alt='user' />
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
@@ -71,14 +71,14 @@ function About({ isDarkMode }) {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.5 }}
             className='flex items-center gap-3 sm:gap-5'>
-            {toolData.map((tool, index) => (
+            {toolData.map(({icon,link}, index) => (
               <motion.li
                 whileHover={{ scale: 1.1 }}
                 className='flex items-center justify-center w-12 sm:w-14 aspect-square border
                    border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 
                    hover:shadow-black dark:hover:shadow-white' key={index}>
-                <Image src={tool} alt='tool' width={20}
-                  height={20} className='w-5 sm:w-7' />
+                <a href={link} target='_blank'><Image src={icon} alt='tool' width={20}
+                  height={20} className='w-5 sm:w-7' /></a>
               </motion.li>
             ))}
           </motion.ul>

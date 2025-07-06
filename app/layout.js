@@ -12,15 +12,15 @@ const ovo = Ovo({
 });
 
 export const metadata = {
-  title: "Portfolio - GreatStack",
+  title: "Portfolio - Aravind R Krishnan",
   description: "My personal portfolio built with Next.js",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth dark">
+    <html lang="en" className="scroll-smooth ">
       <body
-        className={`${outfit.className} ${ovo.className} antialiased leading-8 overflow-x-hidden  dark:bg-[#11001F] dark:text-white`}
+        className={`${outfit.className} ${ovo.className} antialiased leading-8 overflow-x-hidden  dark:bg-[#131313] dark:text-white`}
       >
         {children}
       </body>
