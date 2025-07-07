@@ -8,29 +8,29 @@ const Services = ({ isDarkMode }) => {
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 0.5 }}
       id='services' className='w-full px-[21%] py-10 scroll-mt-20'>
       <motion.h4
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.3 }}
+        transition={{ duration: 1, delay: 0.2 }}
         className='text-center mb-2 text-lg '>What I offer</motion.h4>
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.5 }}
+        transition={{ duration: 1, delay: 0.4 }}
         className='text-center text-5xl '>My Services</motion.h2>
       <motion.p
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.7 }}
+        transition={{ duration: 1, delay: 0.6 }}
         className='text-center max-w-2xl mx-auto mt-5 mb-12'>
         I am a frontend developer from Kerala, India with 10 year of experience in multiple companies like Microsoft, Tesla and Apple.
       </motion.p>
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.9 }}
+        transition={{ duration: 1, delay: 0.8 }}
         className='grid grid-cols-auto gap-6 my-10 '>
         {serviceData.map(({ icon, title, description, link }, index) => (
           <motion.div
